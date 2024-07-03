@@ -1,0 +1,19 @@
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<title>Change your email</title>
+	</head>
+	<body>
+		<h2>Hello{{#if user.firstname}} {{user.firstname}}{{/if}},</h2>
+		<p>An email change has been requested to
+			{{#if
+				user.emailChangeRequested
+			}}{{user.emailChangeRequested}}{{else}}this email address{{/if}}.
+			Please click
+			<a href='{{url}}'>this link</a>
+			and follow the instructions in order to change your account email
+			address.</p>
+		<p>It wasn't you? Then you can ignore this email.</p>
+	</body>
+</html>

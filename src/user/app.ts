@@ -1,0 +1,5 @@
+import './auth/strategies/login'
+import './auth/strategies/authenticate'
+import './auth/strategies/refreshToken'
+import './auth/strategies/google'
+import './routes/router'

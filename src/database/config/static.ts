@@ -8,7 +8,7 @@ const configSchema = { database: databaseConfigSchema }
 const databaseConfig = convict(configSchema)
 
 // Folder /config
-const configPath = path.join(__dirname, '../../../config')
+const configPath = path.join(__dirname, '../../../')
 
 // Load default configuration
 try {

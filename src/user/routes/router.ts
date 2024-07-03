@@ -51,6 +51,9 @@ const mount = (appRouter: Router) => {
 	// TODO: ejemplo
 	router.get('/test', userAuthenticate, reqCatch((req, res, next) => {
 		const { username, firstname, lastname } = req.user as IUser
+		log.info('username', username)
+		log.info('firstname', firstname)
+		log.info('lastname', lastname)
 		res.status(200).json({ username, firstname, lastname })
 	}))
 

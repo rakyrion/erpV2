@@ -1,10 +1,46 @@
 import { Schema, model } from 'mongoose'
 import { IUser } from '../interfaces/user'
-import { authenticableSchema } from '../../auth/models/schemas/authenticable'
+import validator from 'validator'
 
 const userSchema = new Schema<IUser>(
 	{
-		...authenticableSchema,
+		email: {
+			type: String,
+			required: [ true, 'Field "email" is required.' ],
+			unique: true,
+			lowercase: true,
+			trim: true,
+			validate: [
+				validator.isEmail,
+				'"{VALUE}" is not a valid email address.'
+			]
+		},
+		passwordHash: {
+			type: String,
+			required: [ true, 'Field "passwordHash" is required.' ]
+		},
+		credentialsChangedAt: Date,
+		passwordResetToken: {
+			type: String,
+			unique: true,
+			sparse: true
+		},
+		passwordResetExpires: Date,
+		emailChangeToken: {
+			type: String,
+			unique: true,
+			sparse: true
+		},
+		emailChangeExpires: Date,
+		emailChangeRequested: {
+			type: String,
+			lowercase: true,
+			trim: true,
+			validate: [
+				validator.isEmail,
+				'"{VALUE}" is not a valid email address.'
+			]
+		},
 		username: {
 			type: String,
 			unique: true,

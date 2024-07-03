@@ -1,7 +1,7 @@
 {
 	"name": "starter",
 	"version": "1.0.0",
-	"description": "SingularDevs API starter project",
+	"description": "API starter project",
 	"main": "dist/index.js",
 	"scripts": {
 		"start": "nodemon dist",
@@ -15,9 +15,9 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@burns.singularfactory.com:devs/starter/api.git"
+		"url": ""
 	},
-	"author": "José Luis Santana Acosta <joseluis.santana@singulardevs.com>",
+	"author": "Adrian Ruiz Herrera <ruiz.herrera.adrian@gmail.com>",
 	"license": "UNLICENSED",
 	"devDependencies": {
 		"@types/amqplib": "^0.10.4",

@@ -101,7 +101,8 @@ export const getAuthConfigSchema = (entityName: string, defaults: RecursiveParti
 		secret: {
 			doc: `Secret to use with JSON Web Tokens for entity ${entityName}.`,
 			format: 'required-string',
-			default: defaults.jwt?.secret || ''
+			default: defaults.jwt?.secret || '',
+			env: `${entityName.toUpperCase()}_JWT`
 		},
 		accessTokenExpiration: {
 			doc: `Access JSON Web Token expiration time in seconds for entity ${entityName}.`,

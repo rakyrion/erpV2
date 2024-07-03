@@ -1,4 +1,4 @@
-import crypto from 'crypto'
+/* import crypto from 'crypto'
 import { hash } from 'bcryptjs'
 import { Profile } from 'passport-google-oauth20'
 import { IUser } from '../../interfaces/user'
@@ -31,3 +31,4 @@ events.subscribe('passportStrategies', () => {
 		}
 	)
 })
+ */

@@ -35,7 +35,8 @@ const merge = (configSchema: Schema<IConfigSchema>) => {
 		webhookSecret: {
 			doc: 'Stripe Webhook secret',
 			format: String,
-			default: ''
+			default: '',
+			env: 'STRIPE_WEBHOOK_SECRET'
 		}
 	}
 }

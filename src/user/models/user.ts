@@ -59,6 +59,11 @@ const userSchema = new Schema<IUser>(
 			type: Boolean,
 			required: true,
 			default: true
+		},
+		stripeId: {
+			type: String,
+			unique: true,
+			sparse: true
 		}
 	},
 	{ collection: 'users' }

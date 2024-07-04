@@ -5,5 +5,6 @@ export interface IUser extends IEntity, IAuthenticable {
 	username?: string,
 	firstname: string,
 	lastname: string,
-	active: boolean
+	active: boolean,
+	stripeId?: string
 }

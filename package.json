@@ -48,6 +48,7 @@
 		"typescript": "^4.9.5"
 	},
 	"dependencies": {
+		"@types/stripe": "^8.0.417",
 		"amqplib": "^0.10.3",
 		"bcryptjs": "^2.4.3",
 		"commander": "^10.0.1",
@@ -68,6 +69,7 @@
 		"passport-google-oauth20": "^2.0.0",
 		"passport-jwt": "^4.0.1",
 		"passport-local": "^1.0.0",
+		"stripe": "^16.1.0",
 		"validator": "^13.11.0",
 		"winston": "^3.11.0"
 	}

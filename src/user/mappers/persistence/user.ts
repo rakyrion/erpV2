@@ -10,7 +10,8 @@ class UserPersistenceMapper extends AuthenticablePersistenceMapper<IUser> {
 			username: entity.username,
 			firstname: entity.firstname,
 			lastname: entity.lastname,
-			active: entity.active
+			active: entity.active,
+			stripeId: entity.stripeId
 		}
 	}
 

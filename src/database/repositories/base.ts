@@ -113,7 +113,7 @@ export abstract class BaseRepository<T extends IEntity> implements IBaseReposito
 
 	public async countDocuments(queryString: ParsedQs = {}, options: RepositoryOptions = {}): Promise<number> {
 		this.manageQueryString(queryString, options)
-		const query = repositoryQuery(this.model.count(), { ...options, skipPagination: true }, queryString)
+		const query = repositoryQuery(this.model.countDocuments(), { ...options, skipPagination: true }, queryString)
 		const countDocuments = await query
 		return countDocuments
 	}

@@ -19,18 +19,11 @@ const dbUri = connectionString || `${protocol}://${username}:${password}@${host}
 // Connection parameters
 const inProduction = coreConfig.get('core.env') === EEnv.PRODUCTION
 const dbUpdate = !inProduction || options.updateProduction
-const { family, ssl, sslValidate } = options.connection
+/* const { family, ssl, sslValidate } = options.connection
 const { min: minPoolSize, max: maxPoolSize } = options.connection.poolSize
-const dbOptions: ConnectOptions = {
-	retryWrites: true,
-	w: 'majority',
+ */const dbOptions: ConnectOptions = {
 	autoCreate: dbUpdate,
-	autoIndex: dbUpdate,
-	family,
-	minPoolSize,
-	maxPoolSize,
-	ssl,
-	sslValidate
+	autoIndex: dbUpdate
 }
 
 // Global database plugins
